@@ -16,6 +16,8 @@ def upload(request):
             myfile = request.FILES['file']
             fs = FileSystemStorage()
             filename = fs.save(myfile.name, myfile)
+            
+            # TODO: Process the PDF file here
         
             context["url"] = fs.url(filename)
             context["message"] = "File has been uploaded successfully"
