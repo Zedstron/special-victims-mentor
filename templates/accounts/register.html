@@ -1,0 +1,108 @@
+{% extends 'base.html' %}
+{% load socialaccount %}
+{% block title %} | Register Account {% endblock %}
+{% block content %}
+<style>
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #eee;
+}
+.h-custom {
+height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+.h-custom {
+height: 100%;
+}
+}
+</style>
+<section id="register" class="bg-light py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 mx-auto">
+        {% include 'partials/_alert.html' %} 
+          
+        <section class="vh-100">
+  <div class="container-fluid h-custom">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-md-9 col-lg-6 col-xl-5">
+        <img src="https://www.realestatetrade.us/wp-content/uploads/2018/07/Reliable-Property-For-Sale-in-Turkey-Istanbul-1024x465.png"
+          class="img-fluid" alt="Sample image">
+      </div>
+      <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+        <form action="{% url 'register' %}" method="POST">
+          <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+            <p class="lead fw-normal mb-0 me-3">Sign Up with</p>
+            <a href="{% provider_login_url 'google' %}" class="btn btn-danger btn-floating mx-1">
+              <i class="fa fa-google"></i>
+            </a>
+            
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+              <i class="fa fa-facebook"></i>
+            </button>
+
+            <button type="button" class="btn btn-info btn-floating mx-1">
+              <i class="fa fa-twitter"></i>
+            </button>
+
+            <button type="button" class="btn btn-primary btn-floating mx-1">
+              <i class="fa fa-linkedin-in"></i>
+            </button>
+          </div>
+
+          <div class="divider d-flex align-items-center my-4">
+            <p class="text-center fw-bold mx-3 mb-0">Or</p>
+          </div>
+
+           <!-- Full Name input -->
+          <div class="form-outline mb-4">
+            <input type="text" class="form-control form-control-lg"
+              name="full_name"
+              placeholder="Full Name" />
+          </div>
+
+           <!-- Username input -->
+          <div class="form-outline mb-4">
+            <input type="text" name="username" class="form-control form-control-lg"
+              placeholder="Username" />
+          </div>
+
+          <!-- Email input -->
+          <div class="form-outline mb-4">
+            <input type="email" name="email" class="form-control form-control-lg"
+              placeholder="Email Address" />
+          </div>
+
+          <!-- Password input -->
+          <div class="form-outline mb-3">
+            <input type="password" name="password" class="form-control form-control-lg"
+              placeholder="Password" />
+          </div>
+          
+          <!-- Confirm Password input -->
+          <div class="form-outline mb-3">
+            <input type="password" name="password2" class="form-control form-control-lg"
+              placeholder="Confirm Password" />
+          </div>
+
+          <div class="text-center text-lg-start mt-4 pt-2">
+            <button type="button" class="btn btn-primary btn-lg"
+              style="padding-left: 2.5rem; padding-right: 2.5rem;">Create My Account</button>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+          
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% endblock %}
