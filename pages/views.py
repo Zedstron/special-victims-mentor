@@ -1,6 +1,7 @@
 from django.core.files.storage import FileSystemStorage
 from django.http import HttpResponse
 from django.shortcuts import render
+from .pdfhandler import GetResult
 
 def index(request):
     return render(request, 'pages/index.html')
@@ -16,11 +17,10 @@ def upload(request):
             myfile = request.FILES['file']
             fs = FileSystemStorage()
             filename = fs.save(myfile.name, myfile)
-            
             # TODO: Process the PDF file here
         
             context["url"] = fs.url(filename)
-            context["message"] = "File has been uploaded successfully"
+            context["message"] = GetResult("./media/{}".format(filename))
             context["status"] = True
         else:
             context["message"] = "Either no file received or invalid request method"
