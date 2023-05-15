@@ -41,8 +41,7 @@ def login(request):
 
         if user is not None:
             auth.login(request, user)
-            messages.success(request, 'You are now logged in')
-            return redirect('dashboard')
+            return redirect('index')
         else:
             messages.error(request,'Invalid credentials')
             return redirect('login')
@@ -51,7 +50,6 @@ def login(request):
 
 def logout(request):
     auth.logout(request)
-    messages.success(request,'You are now logged out')
     return redirect('index')
 
 def dashboard(request):
