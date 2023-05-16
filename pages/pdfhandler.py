@@ -35,8 +35,6 @@ filename = "./Filledform.pdf"
 
 
 import json
-os.environ["GOOGLE_API_TOKEN"] = "67905247868-1t708l9c0bpfktmvhd6m09bkppbo6jj2.apps.googleusercontent.com"
-os.environ["OPENAI_API_KEY"] = "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"
 
 import secrets
 import json
