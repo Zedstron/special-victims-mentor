@@ -161,6 +161,17 @@
 </style>
 
 {% if status %}
+
+{% if eventsError %}
+<div class="alert alert-danger mb-8">
+  <center><strong>Our Bad!</strong> Your calendar events are not scheduled possible reason might be Either events are not valid, You have not linked your google account or you have not given calendar events scheduling permission</center>
+</div>
+{% else %}
+<div class="alert alert-success mb-8">
+  <center><strong>Hurrah!</strong> Your Calendar has been Updated Successfully!</center>
+</div>
+{% endif %}
+
 <div class="container py-5">
   <div class="main-timeline-4 text-white">
     {% for event in message %}

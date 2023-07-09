@@ -25,7 +25,7 @@ SECRET_KEY = 'x0ov4^!p$7^f12o=1ltd+r^$n3tlxy6l8(xyzv#4s8+4k!x!ki'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.1.10', 'localhost']
+ALLOWED_HOSTS = ['localhost']
 
 
 # Application definition
@@ -139,6 +139,8 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'webapp/static')
 ]
 
+LOGIN_URL = '/auth/login'
+
 
 # media folder settings
 
@@ -167,12 +169,17 @@ ACCOUNT_LOGOUT_ON_GET= True
 SOCIALACCOUNT_LOGIN_ON_GET=True
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_EMAIL_REQUIRED = True
+GOOGLE_CALENDAR_API_NAME = 'calendar'
+GOOGLE_CALENDAR_API_VERSION = 'v3'
+GOOGLE_CALENDAR_SCOPES = ['https://www.googleapis.com/auth/calendar.events']
 
+SOCIALACCOUNT_STORE_TOKENS = True
 SOCIALACCOUNT_PROVIDERS = {
     'google': {
         'SCOPE': [
             'profile',
             'email',
+            'https://www.googleapis.com/auth/calendar'
         ],
         'AUTH_PARAMS': {
             'access_type': 'online',
