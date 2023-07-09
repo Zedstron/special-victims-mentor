@@ -1,0 +1,9 @@
+Django==4.1.1
+django-allauth==0.54.0
+django-environ==0.10.0
+djangorestframework==3.13.1
+djangorestframework-jwt==1.11.0
+djangorestframework-simplejwt==5.2.0
+requests==2.25.1
+pdfminer.six==20221105
+openai==0.27.6
