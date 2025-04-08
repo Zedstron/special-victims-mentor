@@ -1,6 +1,7 @@
-# Special Victims Mentor
+# Special Victims Mentor (#WorldInnovationDay Hack 2023 Gold Winner 🥇)
 
-Special Victims Mentor is a web application designed to provide guidance and support to rape victims in America. This project aims to assist victims who may be unsure of what steps to take after experiencing such trauma. By offering a platform that provides information and resources, Special Victims Mentor helps victims navigate through the process of seeking help and taking appropriate actions.
+Special Victims Mentor is a web application designed to provide guidance and support to rape victims in America. This project aims to assist victims who may be unsure of what steps to take after experiencing such trauma. By offering a platform that provides information and resources, Special Victims Mentor helps victims navigate through the process of seeking help and taking appropriate actions. 
+https://www.linkedin.com/feed/update/urn:li:activity:7075467952032014336/
 
 ## Installation
 
